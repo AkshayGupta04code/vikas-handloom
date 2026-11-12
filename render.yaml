@@ -1,0 +1,25 @@
+# Render Blueprint (free web service). Secrets are entered in the Render dashboard, never committed.
+services:
+  - type: web
+    name: vikas-handloom-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    healthCheckPath: /api/public/settings
+    envVars:
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: SEED_DEMO_DATA
+        value: "true"
