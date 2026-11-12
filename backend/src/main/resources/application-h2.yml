@@ -1,0 +1,8 @@
+# Zero-setup local profile: file-based H2 database (free, no MySQL needed).
+# Run with: SPRING_PROFILES_ACTIVE=h2
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/vikas;MODE=MySQL;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver

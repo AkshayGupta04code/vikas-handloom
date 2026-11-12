@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: vikas-handloom
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/vikas_handloom?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 8MB
+      max-request-size: 10MB
+
+app:
+  jwt-secret: ${JWT_SECRET:}            # >= 32 chars. If empty a random one is generated at startup.
+  admin-username: ${ADMIN_USERNAME:admin}
+  admin-password: ${ADMIN_PASSWORD:}    # If empty a random one is generated and printed once on first run.
+  upload-dir: ${UPLOAD_DIR:./uploads}
+  cors-origins: ${CORS_ORIGINS:http://localhost:5173}
+  seed-demo-data: ${SEED_DEMO_DATA:true}
+  watermark-text: ${WATERMARK_TEXT:VIKAS HANDLOOM}
