@@ -1,5 +1,5 @@
 # VIKAS HANDLOOM - E-commerce catalogue & virtual showroom
-
+deployed url:https://vikas-handloom.pages.dev/
 Free/open-source stack, runs fully on a local computer: **React + TypeScript + Tailwind (Vite)**, **Spring Boot 3 / Java 21**, **Spring Security + JWT + BCrypt**, **MySQL** (or the built-in H2 file DB), local image storage. No paid service is required anywhere.
 
 ```
